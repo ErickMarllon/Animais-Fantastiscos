@@ -189,7 +189,7 @@ h2,h3,dt{
   font-weight: bold;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 780px) {
   .grid-container {
     grid-template-columns: 1fr;
   }
