@@ -79,15 +79,6 @@ h2,h3,dt{
   color: #E54;
 }
 
-/* .animais h2::before {
-  content: '';
-  display: inline-block;
-  width: 40px;
-  height: 10px;
-  margin-right: 10px;
-  background: #FB5;
-} */
-
 .animais h2::before {
   content: '';
   display: inline-block;
@@ -148,14 +139,6 @@ h2,h3,dt{
   color: #E54;
 }
 
-/* .faq-lista dt::before {
-  content: '';
-  display: inline-block;
-  width: 20px;
-  height: 10px;
-  margin-right: 10px;
-  background: #FB5;
-} */
 .faq-lista dt::before {
   content: '';
   display: inline-block;
