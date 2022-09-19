@@ -1,29 +1,32 @@
-export default function initScrollSuave() {
-  
-  const linksInternos = document.querySelectorAll('[data-menu="suave"] a[href^="#"]');
-  if(linksInternos.length){
-    function scrollToSection(event) {
-      event.preventDefault();
-      const href = event.currentTarget.getAttribute('href');
-      const section = document.querySelector(href);
+export default class ScrollSuave {
+  constructor(links, options) {
+    this.linksInternos = document.querySelectorAll(links);
+    if (options === undefined) {
+      this.options = { behavior: 'smooth', block: 'start' };
+    } else {
+      this.options = options;
+    }
 
-      section.scrollIntoView({
-        behavior:'smooth',
-        block: 'start',
-      });
+    this.scrollToSection = this.scrollToSection.bind(this);
+  }
 
-      /* Forma alternativa de scroll suave. 
+  scrollToSection(event) {
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute('href');
+    const section = document.querySelector(href);
+    section.scrollIntoView(this.options);
+  }
 
-      const topo = section.offsetTop;
-      window.scrollTo({
-        top:topo,
-        behavior: 'smooth',
-      });
-      */
-    };
-
-    linksInternos.forEach((link) => {
-      link.addEventListener('click', scrollToSection);
+  addLinkEvent() {
+    this.linksInternos.forEach((link) => {
+      link.addEventListener('click', this.scrollToSection);
     });
-  };
-};
+  }
+
+  init() {
+    if (this.linksInternos.length) {
+      this.addLinkEvent();
+    }
+    return this;
+  }
+}
