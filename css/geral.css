@@ -196,10 +196,10 @@ h2,h3,dt{
   .menu, .grid-section, .copy {
     grid-column: 1;
   }
-  p, dd,a, li{
+  p, dd,a, li {
     font-size: 1.1rem;
   }
-  h2,h3,dt{
+  h2,h3,dt {
     font-size: 1.2rem;
   }
   .grid-section {
@@ -222,6 +222,7 @@ h2,h3,dt{
   .copy {
     margin-bottom: 0px;
   }
+}
 .js [data-tab="content"] section {
   display: none;
 }
