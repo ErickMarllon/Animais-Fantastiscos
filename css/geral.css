@@ -196,6 +196,12 @@ h2,h3,dt{
   .menu, .grid-section, .copy {
     grid-column: 1;
   }
+  p, dd,a, li{
+    font-size: 1.1rem;
+  }
+  h2,h3,dt{
+    font-size: 1.2rem;
+  }
   .grid-section {
     grid-template-columns: 100px 1fr;
     gap: 10px;
@@ -210,16 +216,12 @@ h2,h3,dt{
   .grid-section h1 {
     font-size: 3rem;
   }
-  .numero-animal h3{
-    font-size: 1.8rem;
   .menu {
     margin-top: 0px;
   }
   .copy {
     margin-bottom: 0px;
   }
-}
-
 .js [data-tab="content"] section {
   display: none;
 }
